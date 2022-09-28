@@ -20,6 +20,7 @@ Click **OK** to create the network interface.
 #### Change network interface
 Among the properties of the network interface, you can change the name, IP, and security group.
 Changes can be made only when the network interface is not associated with a floating IP.
+To reflect the IP change, it takes time until the instance is rebooted and the DHCP is renewed.
 
 #### Delete network interface
 Delete the selected network interface.

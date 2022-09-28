@@ -1,28 +1,38 @@
-## Network > Network Interface > 콘솔 사용 가이드
+## Network > Network Interface > Console User Guide
 
 
-#### 네트워크 인터페이스 생성
+#### Create network interface
 
-* 이름: 네트워크 인터페이스의 이름을 입력합니다.
-* VPC: 네트워크 인터페이스를 만들 VPC를 선택합니다.
-* Subnet: 네트워크 인터페이스를 만들 Subnet을 선택합니다.
-* 보안 그룹 선택: 네트워크 인터페이스에서 사용할 보안 그룹을 선택합니다. 여러 개 선택이 가능합니다.
+* Name: Enter a name for the network interface.
 
-**확인**을 클릭하면 네트워크 인터페이스가 생성됩니다.
+* VPC: Select the VPC in which to create the network interface.
 
-#### 네트워크 인터페이스 변경
-네트워크 인터페이스의 속성 중 이름, IP, 보안 그룹을 변경할 수 있습니다.
-플로팅 IP 연결이 없어야 변경이 가능합니다.
+* Subnet: Select the subnet in which to create the network interface.
 
-#### 네트워크 인터페이스 삭제
-선택한 네트워크 인터페이스를 삭제할 수 있습니다.
-삭제를 하려면 네트워크 인터페이스가 장치에 연결이 되어 있지 않아야 합니다.
+* Virtual IP: Create a network interface to use for a virtual IP for redundancy.<br>You can preempt an IP to be used as a virtual IP so that it is not assigned to resources such as other instances and load balancers.<br>The network interface created with a virtual IP has a device name of "VIRTUAL_IP" and can be set as the gateway of the route in the route setting of the routing table.<br>A network interface created with a virtual IP cannot be directly attached to an instance for use when creating an instance.
 
-#### 소스/대상 확인 변경
-소스/대상 확인을 활성화 또는 비활성화하여 인스턴스가 수신하는 트래픽의 소스 또는 대상인지 확인할 수 있습니다.
-NAT 인스턴스의 네트워크 인터페이스인 경우에는 소스/대상 확인이 활성화되지 않아야 하므로, 이 메뉴를 통해 활성화/비활성화 기능을 관리할 수 있습니다.
+* Security: This feature lets you prevent spoofing and set up a security group on a network interface.<br>Enabling the security feature allows you to prevent spoofing by blocking packets that do not have the IP/MAC address of a network interface as a source from being sent through the network interface, and to control traffic using security groups. <br>Disabling the security feature turns off all of such anti-spoofing features and security group settings. This will allow all packets, so if you do not have your own security features (firewall, etc.), it is strongly recommended to use this feature.
 
-> [참고] 인스턴스 생성시 네트워크 인터페이스 생성을 하는 경우와 기존 네트워크 인터페이스 지정을 하는 경우 차이점
+* Select security group: Select the security group to use on the network interface. Multiple selections can be made.
+
+Click **OK** to create the network interface.
+
+#### Change network interface
+Among the properties of the network interface, you can change the name, IP, and security group.
+Changes can be made only when the network interface is not associated with a floating IP.
+To reflect the IP change, it takes time until the instance is rebooted and the DHCP is renewed.
+
+#### Delete network interface
+Delete the selected network interface.
+To delete a network interface, it must not be attached to a device.
+
+#### Change source/target check
+You can enable or disable source/target check to determine if it is the source or target of the traffic that the instance receives.
+For network interfaces of NAT instances, source/target check should not be enabled, so manage the enable/disable features through this menu.
+
+> [Note] Difference between creating a network interface when creating an instance and assigning an existing network interface
 >
-> 인스턴스 생성시에 신규로 네트워크 인터페이스를 생성하는 경우는 해당 인스턴스를 삭제하면 자동으로 생성했던 네트워크 인터페이스도 함께 삭제가 됩니다.
-> 하지만 기존 네트워크 인터페이스를 지정해서 인스턴스를 생성하고, 연결된 인스턴스를 삭제하는 경우에는 해당 인스턴스에서 사용하였던 네트워크 인터페이스는 함께 삭제되지 않습니다. 남겨진 네트워크 인터페이스는 추후 다른 인스턴스에서 연결해서 사용이 가능합니다.
+> * When creating a new network interface
+> 	If you delete the instance, the automatically created network interface is also deleted.
+> * When creating an instance by assigning an existing network interface and deleting the connected instance
+>	The network interfaces used by the instance will not be deleted together. The remaining network interfaces can be attached to other instances for use in the future.
