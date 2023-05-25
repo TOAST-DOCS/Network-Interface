@@ -1,19 +1,19 @@
-## Network > Network Interface > 개요
+## Network > Network Interface > Overview
 
-NHN Cloud는 네트워크 인터페이스 기능을 제공합니다.
+NHN Cloud provides network interface features.
 
-네트워크 인터페이스는 가상 네트워크 카드를 나타내는 VPC의 논리적 네트워크 요소입니다.
-다음 속성을 포함할 수 있습니다.
+The network interface is a logical network component of VPC that represents a virtual network card.
+It may include the following properties.
 
-* VPC의 주소 범위에 있는 프라이빗 IP 주소
-* Floating IP 주소
-* 하나 이상의 보안 그룹
-* 소스/대상 확인 플래그
-* 연결된 장치
-* 이름
+* A private IP address in the address range of VPC.
+* Floating IP address
+* One or more security groups
+* Flag to check source/target [Korea (Pyeongchon) region]
+* Connected devices
+* Name
 
-네트워크 인터페이스 기능을 통해,
+Through network interface features,
 
-* 네트워크 인터페이스의 VPC, subnet, Floating ip, 연결된 보안 그룹, 연결된 장치, 상태 등을 한눈에 확인할 수 있습니다.
-* 네트워크 인터페이스 변경을 통해 다른 서브넷의 ip 대역으로 변경하거나, 다른 보안 그룹을 사용하도록 설정할 수 있습니다.
-* 소스/대상 확인 기능의 활성화/비활성화를 지정할 수 있습니다.
+* Check the VPC, subnet, Floating ip, connected security group, connected device, status, etc., of the network interface at a glance.
+* Through changing the network interface, you can change the IP band to another subnet or set it to use a different security group.
+* In Korea (Pyeongchon) region, you can set whether to enable/disable the feature to check the source/target.
