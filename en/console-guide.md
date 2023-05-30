@@ -27,6 +27,7 @@ Delete the selected network interface.
 To delete a network interface, it must not be attached to a device.
 
 #### Change source/target check
+This feature is only available in the Korea (Pyeongchon) region.
 You can enable or disable source/target check to determine if it is the source or target of the traffic that the instance receives.
 For network interfaces of NAT instances, source/target check should not be enabled, so manage the enable/disable features through this menu.
 
