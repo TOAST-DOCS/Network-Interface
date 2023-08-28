@@ -8,7 +8,7 @@ It may include the following properties.
 * A private IP address in the address range of VPC.
 * Floating IP address
 * One or more security groups
-* Flag to check source/target [Korea (Pyeongchon) region]
+* Flag to check source/target [Korea (Pyeongchon), Korea (Pangyo) regions]
 * Connected devices
 * Name
 
