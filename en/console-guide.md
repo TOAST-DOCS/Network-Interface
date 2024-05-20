@@ -52,25 +52,21 @@ Therefore, to use a virtual IP, you must change the security settings to bypass 
         When registering the virtual IP as an "additional allowed address" on the network interfaces of the instances for which the virtual IP is used, you allow packets with this IP as a source.<br>
         In limited cases, you can bypass anti-spoofing and apply security groups without turning off security features.<br>
         However, this feature is not currently available in the console, to use this feature, you need to create a virtual IP and contact [1:1 Inquiry](https://www.nhncloud.com/en/support/inquiry) using the form below (it will be available in the console in the future).
-        ```
-        1. Request to register additional allowed addresses
-            * Organization ID/Project ID:
-            * Region: (Public/Public, KR1/KR2)
-        2. Virtual IP
-            * IP Address:
-            * VPC ID:
-        3. Register additional allowed addresses for
-            * Instance Name:
-            * Instance UUID:
-            * The IP of the network interface to which the virtual IP will be attached:
-        ```
+        <pre><code class="language-console">1. Request to register additional allowed addresses
+       \- Organization ID/Project ID:
+       \- Region: (Public/Gov, KR1/KR2)<br>2. Virtual IP
+       \- IP Address:
+       \- VPC ID:<br>3. Register additional allowed addresses for
+       \- Instance Name:
+       \- Instance UUID:
+       \- The IP of the network interface to which the virtual IP will be attached:</code></pre>
         
 2. Configure instance operating system
 After you've changed the security settings, configure a virtual IP for your instance. The cloud system does not provide a separate feature for this, and you must either add the IP within the instance using the appropriate method for the instance's operating system or distribution, or configure it yourself using an application.
 
 > [Note] When using virtual IPs, please note the following.
 > * The virtual IP and the network interfaces of the instances that will use the IP must be located within the same subnet.
-> * When communicating using a virtual IP, instances using it are subject to existing security groups.Therefore, there are no separate security group rules that apply to virtual IPs.
+> * When communicating using a virtual IP, instances using it are subject to existing security groups. Therefore, there are no separate security group rules that apply to virtual IPs.
 > * Instances that must receive packets with a virtual IP as a source must check their security groups for rules that allow them to receive virtual IPs remotely.
 >     Virtual IPs do not belong to any security groups, so if you specify "security groups" in your receipt rules remotely, you may not be able to communicate with them because they are not included in that security group.
 > * Instances that use virtual IPs may need to manually adjust their internal routing rules depending on their network configuration.
