@@ -54,7 +54,7 @@ Therefore, to use a virtual IP, you must change the security settings to bypass 
         However, this feature is not currently available in the console, to use this feature, you need to create a virtual IP and contact [1:1 Inquiry](https://www.nhncloud.com/en/support/inquiry) using the form below (it will be available in the console in the future).
         <pre><code class="language-console">1. Request to register additional allowed addresses
        \- Organization ID/Project ID:
-       \- Region: (Public/Gov, KR1/KR2)<br>2. Virtual IP
+       \- Region: <br>2. Virtual IP
        \- IP Address:
        \- VPC ID:<br>3. Register additional allowed addresses for
        \- Instance Name:
