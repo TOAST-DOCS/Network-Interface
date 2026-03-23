@@ -1,6 +1,7 @@
 ## Network > Network Interface > Console User Guide
 
 
+<a id="create"></a>
 #### Create network interface
 
 * Name: Enter a name for the network interface.
@@ -17,15 +18,18 @@
 
 Click **OK** to create the network interface.
 
+<a id="change"></a>
 #### Change network interface
 Among the properties of the network interface, you can change the name, IP, and security group.
 Changes can be made only when the network interface is not associated with a floating IP.
 To reflect the IP change, it takes time until the instance is rebooted and the DHCP is renewed.
 
+<a id="delete"></a>
 #### Delete network interface
 Delete the selected network interface.
 To delete a network interface, it must not be attached to a device.
 
+<a id="source-dest-check-change"></a>
 #### Change source/target check
 This feature is only available in the Korea (Pangyo) and Korea (Pyeongchon) regions.
 You can enable or disable source/target check to determine if it is the source or target of the traffic that the instance receives.
