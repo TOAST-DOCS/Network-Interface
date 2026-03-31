@@ -1,6 +1,7 @@
 ## Network > Network Interface > Console User Guide
 
 
+<a id="create"></a>
 #### Create network interface
 
 * Name: Enter a name for the network interface.
@@ -25,19 +26,23 @@ Click **OK** to create the network interface.
 >	The network interfaces used by the instance will not be deleted together. The remaining network interfaces can be attached to other instances for use in the future.
 
 
+<a id="change"></a>
 #### Change network interface
 Among the properties of the network interface, you can change the name, IP, and security group.
 Changes can be made only when the network interface is not associated with a floating IP.
 To reflect the IP change, it takes time until the instance is rebooted and the DHCP is renewed.
 
+<a id="delete"></a>
 #### Delete network interface
 Delete the selected network interface.
 To delete a network interface, it must not be attached to a device.
 
+<a id="source-dest-check-change"></a>
 #### Change source/target check
 You can enable or disable source/target check to determine if it is the source or target of the traffic that the instance receives.
 For network interfaces of NAT instances, source/target check should not be enabled, so manage the enable/disable features through this menu.
 
+<a id="virtual-ip-usage"></a>
 #### Use virtual IPs
 The network interface you create for a virtual IP is for IP preemption and for designation as a route gateway in the routing table, and is not directly associated with a specific instance.
 To use an IP that you specify as a virtual IP, the following procedure is required.
@@ -54,7 +59,7 @@ Therefore, to use a virtual IP, you must change the security settings to bypass 
         However, this feature is not currently available in the console, to use this feature, you need to create a virtual IP and contact [1:1 Inquiry](https://www.nhncloud.com/en/support/inquiry) using the form below (it will be available in the console in the future).
         <pre><code class="language-console">1. Request to register additional allowed addresses
        \- Organization ID/Project ID:
-       \- Region: (Public/Gov, KR1/KR2)<br>2. Virtual IP
+       \- Region: <br>2. Virtual IP
        \- IP Address:
        \- VPC ID:<br>3. Register additional allowed addresses for
        \- Instance Name:
