@@ -7,13 +7,16 @@ It may include the following properties.
 
 * A private IP address in the address range of VPC.
 * Floating IP address
+* Security setting
+* Anti-spoofing setting
 * One or more security groups
-* Flag to check source/target [Korea (Pyeongchon), Korea (Pangyo) regions]
+* Virtual IP
 * Connected devices
 * Name
 
-Through network interface features,
+The network interface feature allows you to perform the following tasks:
 
 * Check the VPC, subnet, Floating ip, connected security group, connected device, status, etc., of the network interface at a glance.
-* Through changing the network interface, you can change the IP band to another subnet or set it to use a different security group.
-* In Korea (Pyeongchon) region, you can set whether to enable/disable the feature to check the source/target.
+* Change the network interface to an IP range of a different subnet or configure it to use a different security group.
+* Flexibly manage security by configuring security, security groups, anti-spoofing, and additional allowed addresses.
+* Preempt an IP to use as a virtual IP and utilize it as a system resource.
